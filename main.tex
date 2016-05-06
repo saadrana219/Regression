@@ -1,0 +1,232 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{lscape}
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+\title{List of Variables}
+\date{}
+
+\begin{document}
+\begin{table}[ht]
+\caption{Variable Descriptions}
+\label{my-label}
+\begin{tabular}{ll}
+	\hline
+	Variables & Definitions \\
+	\hline
+    sch0\_8 & 1 if acquired first 8 years of education, 0 otherwise \\
+	sch9\_11 & 1 if acquired first  9 to 11 years of education up to high school, 0 otherwise\\
+	sch12 & 1 if attended first year of college, 0 otherwise\\
+    sch13\_15 &  1 if attended the rest of college, 0 otherwise\\
+    sch16 & 1 if attended first year of graduate school, 0 otherwise\\
+   	sch17pl & 1 if attended second year of graduate school\\
+   	male & 1 if male, 0 otherwise\\
+   	black & 1 if black, 0 otherwise\\
+   	hispanic & 1 if hispanic, 0 otherwise\\
+   	black\_x\_male & The interaction of the male dummy with the black dummy\\
+    hispanic\_x\_male & The interaction of the male dummy with the hispanic dummy\\
+   	potexp\_x\_male &The interaction of the male dummy with potential experience \\ 
+    time & Number of years \\
+   	time2 &Second order polynomial of time  \\
+    potexp & Potential experience of workers\\
+    potexp2 &Second order polynomial of the potential experience of workers\\
+    potexp3 &Third order polynomial of the potential experience of workers \\
+    payhat &Predicted pay of workers based on social characterisitics\\
+    lnpayhat & Natural log of payhat \\
+    pay\_mw\_ratio & Ratio of Pay to Minimum Wage \\
+    realmw & Real Minimum Wage in 2012 dollars \\
+    lnrealmw & Natural log of Real Minimum Wage in 2012 dollars \\
+    employed &1 if employed, 0 otherwise \\
+    empstat &Employment Status \\
+    realmw\_1 & Lag term for Real Minimum Wage  \\
+    statefip & State (FIPS code) \\
+    year & Survey Year \\
+    age & Age \\
+    sex & Sex \\
+    race & Race \\
+    \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary Statistics}
+\label{my-label}
+\begin{tabular}{lccc}
+\hline
+			 & Low Wage & Medium Wage & High Wage \\
+\hline
+Mean age 	 & 17.750	& 35.744	& 44.106 \\
+Mean pay		& 9.568	& 17.357	& 33.713 \\
+Mean potexp		& 1.566	& 17.190		& 22.361 \\
+Mean time		& 23.694 & 23.187		& 24.643 \\
+Percentage male	& 62.51	&  67.11		& 53.50 \\
+Percentage female	& 37.49	& 32.89		& 46.50 \\
+Percentage in sc0\_8 	&11.91	&14.54 	& 2.04\\
+Percentage in sc9\_11 	&79.59	& 31.37	&4.78 \\
+Percentage in sc12	&7.82	&36.54 	&33.21\\
+Percentage in sc13\_15	&16.92	&28.24	&28.76 \\
+Percentage in sc16	  &0	& 0.60	&20.70 \\
+Percentage in sc17pl	&0	&0.03	&10.51 \\
+Percentage Whites & 77.41 &  83.69  & 79.71 \\
+Percentage Blacks &16.22 & 9.79  & 14.02\\
+Percentage of Asians &1.27 &2.18  & 1.31  \\
+Percentage of American Indians &1.55 &1.02  & 1.47\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{5 States with the Lowest Average pay\_mw\_ratio}
+\label{my-label}
+\begin{tabular}{lc}
+\hline
+statefip    & pay\_mw\_ratio \\
+\hline
+Mississippi & 2.005268       \\
+Arkansas    & 2.014447       \\
+Oregon      & 2.0748         \\
+Montana     & 2.099596       \\
+South Dakota    & 2.107631 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{5 States with the Highest Average pay\_mw\_ratio}
+\label{my-label}
+\begin{tabular}{lc}
+\hline
+statefip    & pay\_mw\_ratio \\
+\hline
+Colorado & 2.637053       \\
+Virginia & 2.732105       \\
+New Jersey   & 2.827894         \\
+New Hampshire   & 2.856138       \\
+Maryland    & 2.927713 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{landscape} 
+\begin{table}[ht]
+\centering
+\caption{}
+\label{my-label}
+\begin{tabular}{llclclclclclcl}
+                       \hline
+                       &  & \multicolumn{3}{c}{low income workers} &  & \multicolumn{3}{c}{medium income workers} &  & \multicolumn{3}{c}{high income workers} &  \\
+                       \hline
+                       &  & (1)    &     & (2)   &  & (1)     &      & (2)    &  & (1)    &     & (2)    &  \\
+                       \hline
+                       &  &                 &     &                &  &                  &      &                 &  &                 &     &                 &  \\
+realmw                 &  & -0.013      &     &                &  & -0.001       &      &                 &  & -0.001      &     & -0.007      &  \\
+                       &  & (-0.004)       &     &                &  & (0.003)         &      &                 &  & (0.003)       &     & (0.018)        &  \\
+payhat                 &  & 0.001        &     &                &  & -0.015       &      &                 &  & -0.002     &     & 0.024        &  \\
+                       &  & (-0.013)       &     &                &  &(0.005)        &      &                 &  & (0.002)       &     & (0.032)        &  \\
+lnrealmw               &  &                 &     & -0.088        &  &                  &      & -0.008       &  &                 &     &                 &  \\
+                       &  &                 &     & ( 0.030 )   &  &                  &      & (0.025)       &  &                 &     &                 &  \\
+lnpayhat               &  &                 &     & 0.053       &  &                  &      & -0.050      &  &                 &     &                 &  \\
+                       &  &                 &     & (-0.088)   &  &                  &      & (0.068)       &  &                 &     &                 &  \\
+sch0\_8                &  & -0.317       &     & -0.303     &  & -0.284         &      & -0.253      &  & -0.178      &     & -0.164      &  \\
+                       &  & (-0.033)       &     & (0.032)      &  & (0.012)        &      & (0.024)       &  & (0.020)        &     & (0.022)        &  \\
+sch13\_15              &  & 0.063       &     & 0.056      &  & 0.083         &      & 0.067       &  & 0.036       &     & 0.029       &  \\
+                       &  & (-0.030)       &     & (0.029)       &  & (0.010)        &      & (0.011)        &  & (0.005)        &     & (0.006)        &  \\
+male                   &  & -0.055      &     & -0.060      &  & -0.018        &      & -0.030       &  & -0.046      &     & -0.051      &  \\
+                       &  & (-0.014)       &     & (0.014)       &  & (0.009)        &      & (0.010)        &  & (0.007)        &     & (0.007)        &  \\
+black                  &  & -0.178      &     & -0.176     &  & -0.117       &      & -0.111      &  & -0.009      &     & -0.006       &  \\
+                       &  & (-0.010)       &     & (0.013)       &  & (0.011)        &      & (0.012)       &  & (0.008)       &     & (0.008)       &  \\
+hispanic               &  & -0.095      &     & -0.0910     &  & -0.064       &      & -0.055      &  & -0.037      &     & -0.033      &  \\
+                       &  & (-0.016)      &     & (0.016)      &  & (0.017)        &      & (0.018)        &  & (0.011)        &     & (0.012)        &  \\
+black\_x\_male         &  & 0.010        &     & 0.016      &  & -0.088       &      & -0.076      &  & -0.096        &     & -0.091       &  \\
+                       &  & (-0.011)       &     & (0.014)      &  & (0.009)         &      & (0.010)       &  & (0.007)        &     & (-0.091)      &  \\
+hispanic\_x\_male      &  & 0.062       &     & 0.065       &  & 0.088        &      & 0.095       &  & 0.056       &     & 0.059        &  \\
+                       &  & (-0.006)    &     & (0.007)       &  & (0.010)        &      & (0.011)       &  & (0.008)       &     & (0.008)       &  \\
+potexp\_x\_male        &  & 0.047       &     & 0.047      &  & 0.034         &      & 0.033       &  & 0.025       &     & 0.025        &  \\
+                       &  & (-0.005)    &     & (0.005)      &  & (0.001)        &      & (0.001)        &  & (0.001)        &     & (0.001)       &  \\
+R-Squared              &  & 0.088          &     & 0.088         &  & 0.090           &      & 0.089          &  & 0.045          &     & 0.045          &  \\
+Number of Observations &  & 183,777         &     & 183,777        &  & 435,386          &      & 435,386         &  & 397,183         &     & 397,183         & \\
+\hline
+\end{tabular}
+\end{table}
+\end{landscape}
+
+\begin{table}[ht]
+\centering
+\caption{}
+\label{my-label}
+\begin{tabular}{llclcl}
+\hline
+                       &  & (1) &            & (2) &  \\
+\hline
+lnrealmw               &  &              &            & -0.039   &    \\
+                       &  &              &            & 0.018     &    \\
+realmw\_x\_hw          &  & 0.007         &            & 0.024     & \\
+                       &  & 0.001        &            & 0.005    &   \\
+realmw                 &  & -0.007        &            &              &  \\
+                       &  & 0.002        &            &              & \\
+payhat                 &  & -0.014       &            & -0.018    &   \\
+                       &  & 0.003         &            & 0.003    &   \\
+sch0\_8                &  & -0.273       &            & -0.282    &  \\
+                       &  & 0.015        &            & 0.015     &   \\
+sch13\_15              &  & 0.080     &            & 0.084     &  \\
+                       &  & 0.006    &            & 0.006     &   \\
+male                   &  & -0.025    &            & -0.022    &  \\
+                       &  & 0.006    &            & 0.006     &  \\
+black                  &  & -0.109    &            & -0.110   &  \\
+                       &  & 0.007    &            & 0.007    &  \\
+hispanic               &  & -0.075   &            & -0.076   &  \\
+                       &  & 0.012     &            & 0.011    & \\
+black\_x\_male         &  & -0.065   &            & -0.067    &  \\
+                       &  & 0.006     &            & 0.007    &  \\
+hispanic\_x\_male      &  & 0.084     &            & 0.082    &   \\
+                       &  & 0.006    &            & 0.006    & \\
+potexp\_x\_male        &  & 0.029     &            & 0.030    &    \\
+                       &  & 0.001    &            & 0.001    & \\
+payhat*time            &  &              &            & 0.003    & \\
+                       &  &              &            & 0.001    &  \\
+R-Squared              &  & 0.191      &            & 0.089       & \\
+Number of Observations &  & 1016346      &            & 1016346      & \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{}
+\label{my-label}
+\begin{tabular}{lclc}
+\hline
+\multicolumn{2}{c}{1}               & \multicolumn{2}{c}{2}               \\
+\hline
+lnrealmw               & -0.067301  & realmw                 & -0.016411  \\
+                       & 0.0323219  &                        & 0.0031308  \\
+lnpayhat               & -0.0419481 & lnpayhat               & -0.0151268 \\
+                       & 0.099979   &                        & 0.0999893  \\
+sch0\_8                & -0.3195634 & sch0\_8                & -0.3045529 \\
+                       & .0368917   &                        & 0.0339079  \\
+sch13\_15              & 0.1029395  & sch13\_15              &            \\
+                       & 0.0287761  &                        &            \\
+male                   & -0.0507378 & male                   & -0.0336483 \\
+                       & 0.0147048  &                        & 0.0142616  \\
+black                  & -0.1821347 & black                  & -0.2088712 \\
+                       & 0.0100653  &                        & 0.0118508  \\
+hispanic               & -0.0884343 & hispanic               & -0.1273707 \\
+                       & 0.0180017  &                        & 0.0205034  \\
+black\_x\_male         & -0.0001988 & black\_x\_male         & 0.0214578  \\
+                       & 0.012326   &                        & 0.0134376  \\
+hispanic\_x\_male      & 0.0513406  & hispanic\_x\_male      & 0.0784901  \\
+                       & 0.0073126  &                        & 0.007493   \\
+potexp\_x\_male        & 0.0541591  & potexp\_x\_male        & 0.001565   \\
+                       & 0.0049215  &                        & 0.0046627  \\
+R-Squared              & 0.1207     & R-Squared              & 0.0943     \\
+Number of Observations & 168,243    & Number of Observations & 139,851 \\
+\hline
+\end{tabular}
+\end{table}
+\end{document}
+
+
